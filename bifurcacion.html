@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras de Bifurcación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #00796b;
+        }
+        h2 {
+            color: #004d40;
+        }
+        h3 {
+            color: #004d40;
+        }
+        p {
+            color: #333;
+        }
+        .content {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        code {
+            display: block;
+            background: #f1f8e9;
+            color: #1b5e20;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button-container a {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button-container a:hover {
+            background-color: #004d40;
+        }
+    </style></head>
+<body>
+    <div class="content">
+        <h1>Estructuras de Bifurcación</h1>
+
+        <h2>Introducción</h2>
+        <p>Las estructuras de bifurcación, también conocidas como estructuras de control de flujo, son fundamentales en la programación y permiten que un programa tome decisiones y ejecute diferentes bloques de código en función de condiciones específicas. En C, las estructuras de bifurcación más comunes son <code>if</code>, <code>if-else</code>, <code>else if</code>, y <code>switch</code>.</p>
+
+        <h2>Estructuras de Bifurcación en C</h2>
+
+        <h3>1. <code>if</code></h3>
+        <p>La estructura <code>if</code> se utiliza para ejecutar un bloque de código solo si una condición específica se evalúa como verdadera.</p>
+        <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int x = 10;
+
+    if (x > 5) {
+        printf("x es mayor que 5\\n");
+    }
+
+    return 0;
+}
+        </code>
+
+        <h3>2. <code>if-else</code></h3>
+        <p>La estructura <code>if-else</code> se utiliza para ejecutar un bloque de código si una condición es verdadera y otro bloque si la condición es falsa.</p>
+        <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int x = 10;
+
+    if (x > 15) {
+        printf("x es mayor que 15\\n");
+    } else {
+        printf("x no es mayor que 15\\n");
+    }
+
+    return 0;
+}
+        </code>
+
+        <h3>3. <code>else if</code></h3>
+        <p>La estructura <code>else if</code> permite comprobar múltiples condiciones y ejecutar diferentes bloques de código según cuál condición se evalúe como verdadera.</p>
+        <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int x = 10;
+
+    if (x > 15) {
+        printf("x es mayor que 15\\n");
+    } else if (x > 5) {
+        printf("x es mayor que 5 pero menor o igual a 15\\n");
+    } else {
+        printf("x es menor o igual a 5\\n");
+    }
+
+    return 0;
+}
+        </code>
+
+        <h3>4. <code>switch</code></h3>
+        <p>La estructura <code>switch</code> se utiliza para seleccionar entre múltiples bloques de código basados en el valor de una expresión.</p>
+        <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int x = 2;
+
+    switch (x) {
+        case 1:
+            printf("x es 1\\n");
+            break;
+        case 2:
+            printf("x es 2\\n");
+            break;
+        case 3:
+            printf("x es 3\\n");
+            break;
+        default:
+            printf("x no es 1, 2 o 3\\n");
+            break;
+    }
+
+    return 0;
+}
+        </code>
+    </div>
+<div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+    <a href="menuservicios.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU</a>
+    <a href="menuunidad2.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU UNIDAD</a>
+  <a href="practicas2.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">PRACTICAS</a>
+
+ 
+</div>
+
+</body>
+</html>

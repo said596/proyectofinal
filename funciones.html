@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones en C</title>
+   </head>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #00796b;
+        }
+        h2 {
+            color: #004d40;
+        }
+        h3 {
+            color: #004d40;
+        }
+        p {
+            color: #333;
+        }
+        .content {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        code {
+            display: block;
+            background: #f1f8e9;
+            color: #1b5e20;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button-container a {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button-container a:hover {
+            background-color: #004d40;
+        }
+    </style>
+
+
+<body>
+    <div class="content">
+        <h1>Funciones en C</h1>
+
+        <h2>Introducción</h2>
+        <p>Una función en C es un bloque de código que realiza una tarea específica. Puedes usar funciones para organizar y modularizar tu código, lo que hace que sea más fácil de entender, mantener y depurar.</p>
+
+        <h2>Sintaxis de una Función en C</h2>
+        <p>La sintaxis básica de una función en C es la siguiente:</p>
+        <code>
+tipo_de_retorno nombre_de_la_funcion(parametros) {
+    // Cuerpo de la función
+    // Puede incluir declaraciones de variables, operaciones, etc.
+    return valor_de_retorno;
+}
+        </code>
+
+        <h2>Ejemplo de una Función en C</h2>
+        <p>A continuación se muestra un ejemplo de una función simple que calcula la suma de dos números:</p>
+        <code>
+#include &lt;stdio.h&gt;
+
+// Declaración de la función
+int sumar(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int num1 = 5, num2 = 7;
+    int resultado;
+
+    // Llamada a la función
+    resultado = sumar(num1, num2);
+
+    // Imprimir el resultado
+    printf("La suma de %d y %d es %d\n", num1, num2, resultado);
+
+    return 0;
+}
+        </code>
+
+        <h2>Tipos de Retorno y Parámetros</h2>
+        <p>Las funciones en C pueden devolver valores de cualquier tipo de datos, incluidos int, float, char, etc. Además, pueden tomar cero o más parámetros como entrada.</p>
+
+        <h2>Funciones de Biblioteca Estándar</h2>
+        <p>C también proporciona muchas funciones de biblioteca estándar que están predefinidas y se pueden utilizar simplemente incluyendo la cabecera correspondiente. Algunos ejemplos comunes son <code>printf()</code>, <code>scanf()</code>, <code>strlen()</code>, etc.</p>
+
+        <h2>Conclusión</h2>
+        <p>Las funciones son una parte fundamental de la programación en C. Ayudan a dividir el código en partes más pequeñas y manejables, lo que facilita el desarrollo y la depuración del programa.</p>
+    </div>
+<div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+    <a href="menuservicios.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU</a>
+    <a href="menuunidad3.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU UNIDAD</a>
+<a href="practicas3.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">PRACTICAS</a>
+
+ 
+</div>
+
+</body>
+</html>

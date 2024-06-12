@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Diagramas de Flujo</title>
+  </head>
+
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #00796b;
+        }
+        h2 {
+            color: #004d40;
+        }
+        h3 {
+            color: #004d40;
+        }
+        p {
+            color: #333;
+        }
+        .content {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        code {
+            display: block;
+            background: #f1f8e9;
+            color: #1b5e20;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button-container a {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button-container a:hover {
+            background-color: #004d40;
+        }
+    </style>
+<body>
+    <div class="content">
+        <h1>Diseño de Diagramas de Flujo</h1>
+
+        <h2>1. Identificación del Problema</h2>
+        <p>El primer paso es identificar y definir claramente el problema que se va a resolver.</p>
+        <h3>Ejemplo:</h3>
+        <p>Problema: Calcular la suma de los primeros <code>n</code> números naturales.</p>
+        <code>
+            Entrada: Un número entero <code>n</code>.<br>
+            Salida: La suma de los primeros <code>n</code> números naturales.
+        </code>
+
+        <h2>2. Definición del Algoritmo</h2>
+        <p>Desarrollar un algoritmo paso a paso que resuelva el problema identificado.</p>
+        <h3>Ejemplo:</h3>
+        <code>
+            1. Iniciar con <code>suma</code> igual a 0.<br>
+            2. Para cada número <code>i</code> desde 1 hasta <code>n</code>, hacer:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; <code>suma = suma + i</code><br>
+            3. Mostrar <code>suma</code>.
+        </code>
+
+        <h2>3. Construcción del Diagrama de Flujo</h2>
+        <p>Crear un diagrama de flujo que represente el algoritmo de manera visual.</p>
+        <h3>Ejemplo:</h3>
+        <p>Un diagrama de flujo para el cálculo de la suma de los primeros <code>n</code> números naturales incluiría:</p>
+        <ul>
+            <li>Inicio</li>
+            <li>Entrada de <code>n</code></li>
+            <li>Inicialización de <code>suma</code> a 0</li>
+            <li>Bucle desde 1 hasta <code>n</code></li>
+            <li>Sumar <code>i</code> a <code>suma</code></li>
+            <li>Mostrar <code>suma</code></li>
+            <li>Fin</li>
+        </ul>
+
+        <h2>4. Validación del Diagrama de Flujo</h2>
+        <p>Revisar el diagrama de flujo para asegurarse de que representa correctamente el algoritmo y que no tiene errores.</p>
+
+        <h2>5. Implementación del Algoritmo en Código</h2>
+        <p>Traducir el diagrama de flujo a un programa de computadora utilizando un lenguaje de programación.</p>
+        <h3>Ejemplo en C:</h3>
+        <code>
+            #include &lt;stdio.h&gt;<br>
+            <br>
+            // Función para calcular la suma de los primeros n números naturales<br>
+            int suma_n_numeros(int n) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;int suma = 0;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;for (int i = 1; i <= n; i++) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;suma += i;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return suma;<br>
+            }<br>
+            <br>
+            int main() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;int n;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;printf("Ingrese un número entero: ");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;scanf("%d", &n);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;int resultado = suma_n_numeros(n);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;printf("La suma de los primeros %d números naturales es: %d\n", n, resultado);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+            }<br>
+        </code>
+    </div>
+<div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+    <a href="menuservicios.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU</a>
+    <a href="menuunidad1.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU UNIDAD</a>
+  <a href="practicas1.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">PRACTICAS</a>
+
+ 
+</div>
+
+</body>
+</html>

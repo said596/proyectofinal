@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Algoritmos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #00796b;
+        }
+        h2 {
+            color: #004d40;
+        }
+        h3 {
+            color: #004d40;
+        }
+        p {
+            color: #333;
+        }
+        .content {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        code {
+            display: block;
+            background: #f1f8e9;
+            color: #1b5e20;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button-container a {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button-container a:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Diseño de Algoritmos</h1>
+
+        <h2>1. Comprender el Problema</h2>
+        <p>Antes de diseñar un algoritmo, es fundamental entender claramente el problema. Esto incluye identificar las entradas, salidas y restricciones del problema.</p>
+        <h3>Ejemplo:</h3>
+        <p>Problema: Encontrar el máximo común divisor (MCD) de dos números.</p>
+        <code>
+            Entrada: Dos números enteros positivos, a y b.<br>
+            Salida: El MCD de a y b.
+        </code>
+
+        <h2>2. Definir un Algoritmo Inicial</h2>
+        <p>Esbozar un algoritmo básico que resuelva el problema.</p>
+        <h3>Ejemplo:</h3>
+        <p>Algoritmo de Euclides para encontrar el MCD:</p>
+        <code>
+            1. Si b es 0, entonces el MCD es a.<br>
+            2. De lo contrario, el MCD de a y b es el mismo que el MCD de b y a % b.
+        </code>
+
+        <h2>3. Refinamiento del Algoritmo</h2>
+        <p>Refinar el algoritmo inicial para mejorar su eficiencia o claridad.</p>
+        <h3>Ejemplo:</h3>
+        <p>El algoritmo de Euclides puede ser refinado para usar una implementación iterativa en lugar de recursiva, mejorando así su eficiencia en términos de consumo de memoria.</p>
+
+        <h2>4. Validación del Algoritmo</h2>
+        <p>Asegurarse de que el algoritmo funciona correctamente para todas las entradas posibles.</p>
+        <h3>Ejemplo:</h3>
+        <p>Probar el algoritmo de Euclides con varios pares de números para verificar que siempre devuelve el MCD correcto.</p>
+
+        <h2>5. Análisis de Complejidad</h2>
+        <p>Analizar la complejidad temporal y espacial del algoritmo para entender su rendimiento.</p>
+        <h3>Ejemplo:</h3>
+        <p>El algoritmo de Euclides tiene una complejidad temporal de O(log(min(a, b))) debido a que reduce el problema de manera significativa en cada iteración.</p>
+
+        <h2>Ejemplo de Código en C</h2>
+        <code>
+            #include &lt;stdio.h&gt;<br>
+            <br>
+            // Función para encontrar el MCD utilizando el algoritmo de Euclides<br>
+            int gcd(int a, int b) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;while (b != 0) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int temp = b;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = a % b;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = temp;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return a;<br>
+            }<br>
+            <br>
+            int main() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;int a = 56, b = 98;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;printf("El MCD de %d y %d es %d\n", a, b, gcd(a, b));<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+            }<br>
+        </code>
+    </div>
+<div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+    <a href="menuservicios.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU</a>
+    <a href="menuunidad1.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU UNIDAD</a>
+  <a href="actividades3.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">ACTIVIDADES</a>
+
+ 
+</div>
+
+</body>
+</html>
+

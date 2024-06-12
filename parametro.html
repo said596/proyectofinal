@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parámetros Básicos de un Circuito Eléctrico</title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #00796b;
+        }
+        h2 {
+            color: #004d40;
+        }
+        h3 {
+            color: #004d40;
+        }
+        p {
+            color: #333;
+        }
+        .content {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        code {
+            display: block;
+            background: #f1f8e9;
+            color: #1b5e20;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button-container a {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button-container a:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Parámetros Básicos de un Circuito Eléctrico</h1>
+
+        <h2>Teoría</h2>
+ <p>Los circuitos eléctricos son sistemas que permiten el flujo de corriente eléctrica a través de diferentes componentes, como resistencias, condensadores, inductores y fuentes de alimentación. Los parámetros básicos de un circuito eléctrico incluyen la resistencia, la corriente, la tensión y la potencia.</p>
+        <p>Los parámetros básicos de un circuito eléctrico incluyen la resistencia, la corriente, la tensión y la potencia.</p>
+
+        <ul>
+            <li><b>Resistencia (R):</b> Medida en ohmios (\( \Omega \)).</li>
+            <li><b>Corriente (I):</b> Medida en amperios (A).</li>
+            <li><b>Tensión (V):</b> Medida en voltios (V).</li>
+            <li><b>Potencia (P):</b> Medida en vatios (W).</li>
+        </ul>
+ <h2>diagrama de flujo</h2>
+<img src="diagrama4.png" alt="diagrama" class="centered-image">
+
+        <h2>Programa en C para Calcular los Parámetros Básicos</h2>
+        <p>A continuación se muestra un programa en C que calcula los parámetros básicos de un circuito eléctrico:</p>
+
+        <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    float resistencia, corriente, tension, potencia;
+
+    // Lectura de los valores de resistencia, corriente y tensión
+    printf("Ingrese el valor de la resistencia (en ohmios): ");
+    scanf("%f", &resistencia);
+
+    printf("Ingrese el valor de la corriente (en amperios): ");
+    scanf("%f", &corriente);
+
+    printf("Ingrese el valor de la tensión (en voltios): ");
+    scanf("%f", &tension);
+
+    // Cálculo de la potencia
+    potencia = tension * corriente;
+
+    // Impresión de los resultados
+    printf("\nResultados:\n");
+    printf("Resistencia: %.2f ohmios\n", resistencia);
+    printf("Corriente: %.2f amperios\n", corriente);
+    printf("Tensión: %.2f voltios\n", tension);
+    printf("Potencia: %.2f vatios\n", potencia);
+
+    return 0;
+}
+        </code>
+ <h2>Ejecutable</h2>
+<img src="ejecutable7.png" alt="diagrama" class="centered-image">
+    </div>
+<div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+    <a href="menuservicios.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU</a>
+    <a href="menuunidad2.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU UNIDAD</a>
+ <a href="actividades2.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">ACTIVIDADES </a>
+</div>
+
+
+</body>
+</html>

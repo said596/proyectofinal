@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superficie de una Figura Irregular</title>
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #00796b;
+        }
+        h2 {
+            color: #004d40;
+        }
+        h3 {
+            color: #004d40;
+        }
+        p {
+            color: #333;
+        }
+        .content {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        code {
+            display: block;
+            background: #f1f8e9;
+            color: #1b5e20;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button-container a {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button-container a:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Superficie de una Figura Irregular</h1>
+
+        <h2>Teoría</h2>
+        <p>Una figura irregular es aquella que no se puede clasificar como una figura geométrica común, como un cuadrado, rectángulo o círculo. Calcular la superficie de una figura irregular puede ser más complejo que para figuras regulares.</p>
+        <p>Para calcular la superficie de una figura irregular, se pueden utilizar diferentes métodos:</p>
+        <ul>
+            <li><b>Método de aproximación:</b> Dividir la figura en formas regulares (triángulos, rectángulos, etc.) y sumar las áreas de estas formas.</li>
+            <li><b>Método de integración:</b> Si la figura se puede describir con una función matemática, se puede utilizar integración para encontrar el área bajo la curva.</li>
+            <li><b>Método de Monte Carlo:</b> Generar puntos aleatorios dentro de la figura y usar la proporción de puntos dentro de la figura con respecto al total para estimar el área.</li>
+        </ul>
+
+        <h2>Diagrama de Flujo</h2>
+       <img src="diagrama2.png" alt="diagrama" class="centered-image">
+
+        <h2>Ejemplo de Código en C</h2>
+        <code>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+float calcularSuperficieTriangulo(float base, float altura) {
+    return 0.5 * base * altura;
+}
+
+float calcularSuperficieRectangulo(float base, float altura) {
+    return base * altura;
+}
+
+float calcularSuperficieFiguraIrregular(float superficies[], int n) {
+    float superficieTotal = 0;
+    for (int i = 0; i &lt; n; i++) {
+        superficieTotal += superficies[i];
+    }
+    return superficieTotal;
+}
+
+int main() {
+    int n;
+    printf("Ingrese el número de formas regulares que componen la figura irregular: ");
+    scanf("%d", &n);
+
+    float superficies[n];
+    char tipo;
+    float base, altura;
+
+    for (int i = 0; i &lt; n; i++) {
+        printf("Ingrese el tipo de forma regular (T para triángulo, R para rectángulo): ");
+        scanf(" %c", &tipo);
+
+        if (tipo == 'T') {
+            printf("Ingrese la base y la altura del triángulo %d: ", i + 1);
+            scanf("%f %f", &base, &altura);
+            superficies[i] = calcularSuperficieTriangulo(base, altura);
+        } else if (tipo == 'R') {
+            printf("Ingrese la base y la altura del rectángulo %d: ", i + 1);
+            scanf("%f %f", &base, &altura);
+            superficies[i] = calcularSuperficieRectangulo(base, altura);
+        } else {
+            printf("Tipo de forma no reconocido. Intente nuevamente.\n");
+            i--; // Repetir el ciclo
+        }
+    }
+
+    float superficieTotal = calcularSuperficieFiguraIrregular(superficies, n);
+    printf("La superficie total de la figura irregular es: %.2f\n", superficieTotal);
+
+    return 0;
+}
+        </code>
+ <h2>Ejecutable</h2>
+<img src="ejecutable5.png" alt="diagrama" class="centered-image">
+    </div>
+<div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+    <a href="menuservicios.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU</a>
+    <a href="menuunidad1.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU UNIDAD</a>
+ <a href="actividades1.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">ACTIVIDADES </a>
+</div>
+
+
+</body>
+</html>

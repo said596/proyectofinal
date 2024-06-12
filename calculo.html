@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Magnitudes Matemáticas o Físicas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #00796b;
+        }
+        h2 {
+            color: #004d40;
+        }
+        h3 {
+            color: #004d40;
+        }
+        p {
+            color: #333;
+        }
+        .content {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        code {
+            display: block;
+            background: #f1f8e9;
+            color: #1b5e20;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button-container a {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button-container a:hover {
+            background-color: #004d40;
+        }
+    </style></head>
+<body>
+    <div class="content">
+        <h1>Cálculo de Magnitudes Matemáticas o Físicas</h1>
+
+        <h2>Teoría</h2>
+        <ul>
+<li><b>Área de un círculo:</b> Área = πr<sup>2</sup></li>
+<li><b>Volumen de una esfera:</b> Volumen = 4/3 πr<sup>3</sup></li>
+<li><b>Velocidad:</b> Velocidad = Distancia / Tiempo</li>
+<li><b>Fuerza:</b> Fuerza = m × a</li>
+<li><b>Energía cinética:</b> Energía cinética = 1/2 m v<sup>2</sup></li>
+
+        </ul>
+
+        <h2>Diagrama de Flujo</h2>
+       
+<img src="diagrama3.png" alt="diagrama" class="centered-image">        <h2>Ejemplo de Código en C</h2>
+        <code>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+// Constante Pi
+#define PI 3.14159
+
+// Funciones para el cálculo de las magnitudes
+float calcularAreaCirculo(float radio) {
+    return PI * radio * radio;
+}
+
+float calcularVolumenEsfera(float radio) {
+    return (4.0/3.0) * PI * pow(radio, 3);
+}
+
+float calcularVelocidad(float distancia, float tiempo) {
+    return distancia / tiempo;
+}
+
+float calcularFuerza(float masa, float aceleracion) {
+    return masa * aceleracion;
+}
+
+float calcularEnergiaCinetica(float masa, float velocidad) {
+    return 0.5 * masa * pow(velocidad, 2);
+}
+
+int main() {
+    float radio, distancia, tiempo, masa, aceleracion, velocidad;
+
+    // Cálculo del área de un círculo
+    printf("Ingrese el radio del círculo: ");
+    scanf("%f", &radio);
+    printf("El área del círculo es: %.2f\n", calcularAreaCirculo(radio));
+
+    // Cálculo del volumen de una esfera
+    printf("Ingrese el radio de la esfera: ");
+    scanf("%f", &radio);
+    printf("El volumen de la esfera es: %.2f\n", calcularVolumenEsfera(radio));
+
+    // Cálculo de la velocidad
+    printf("Ingrese la distancia recorrida: ");
+    scanf("%f", &distancia);
+    printf("Ingrese el tiempo empleado: ");
+    scanf("%f", &tiempo);
+    printf("La velocidad es: %.2f\n", calcularVelocidad(distancia, tiempo));
+
+    // Cálculo de la fuerza
+    printf("Ingrese la masa: ");
+    scanf("%f", &masa);
+    printf("Ingrese la aceleración: ");
+    scanf("%f", &aceleracion);
+    printf("La fuerza es: %.2f\n", calcularFuerza(masa, aceleracion));
+
+    // Cálculo de la energía cinética
+    printf("Ingrese la masa: ");
+    scanf("%f", &masa);
+    printf("Ingrese la velocidad: ");
+    scanf("%f", &velocidad);
+    printf("La energía cinética es: %.2f\n", calcularEnergiaCinetica(masa, velocidad));
+
+    return 0;
+}
+        </code>
+    </div>
+ <h2>Ejecutable</h2>
+<img src="ejecutable6.png" alt="diagrama" class="centered-image">
+
+<div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+    <a href="menuservicios.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU</a>
+    <a href="menuunidad1.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU UNIDAD</a>
+ <a href="actividades1.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">ACTIVIDADES </a>
+</div>
+
+
+
+</body>
+</html>

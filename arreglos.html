@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos en C</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: left;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #444;
+        }
+        .content {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        code {
+            display: block;
+            background: #eee;
+            padding: 10px;
+            margin: 10px 0;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Arreglos en C</h1>
+
+        <h2>Introducción</h2>
+        <p>Un arreglo en C es una colección ordenada de elementos del mismo tipo. Los arreglos son útiles para almacenar y manipular datos de manera eficiente en un programa.</p>
+
+        <h2>Sintaxis de un Arreglo en C</h2>
+        <p>La sintaxis básica de un arreglo en C es la siguiente:</p>
+        <code>
+tipo_de_dato nombre_del_arreglo[tamaño];
+        </code>
+        <p>Donde:</p>
+        <ul>
+            <li><b>tipo_de_dato</b>: especifica el tipo de datos de los elementos del arreglo, como int, float, char, etc.</li>
+            <li><b>nombre_del_arreglo</b>: es el nombre que se asigna al arreglo.</li>
+            <li><b>tamaño</b>: especifica el número de elementos que puede contener el arreglo.</li>
+        </ul>
+
+        <h2>Ejemplo de un Arreglo en C</h2>
+        <p>A continuación se muestra un ejemplo de cómo declarar e inicializar un arreglo de enteros en C:</p>
+        <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    // Declaración e inicialización del arreglo
+    int numeros[5] = {1, 2, 3, 4, 5};
+
+    // Acceder e imprimir elementos del arreglo
+    printf("Elementos del arreglo:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", numeros[i]);
+    }
+
+    return 0;
+}
+        </code>
+
+        <h2>Acceso a Elementos de un Arreglo</h2>
+        <p>Los elementos de un arreglo se pueden acceder mediante el uso de índices. El primer elemento de un arreglo tiene el índice 0, el segundo elemento tiene el índice 1 y así sucesivamente.</p>
+
+        <h2>Operaciones Comunes con Arreglos</h2>
+        <ul>
+            <li><b>Asignación:</b> Se puede asignar valores a los elementos individuales del arreglo.</li>
+            <li><b>Lectura y Escritura:</b> Se pueden leer y escribir valores en los elementos del arreglo.</li>
+            <li><b>Iteración:</b> Se puede recorrer un arreglo utilizando bucles, como <code>for</code> o <code>while</code>.</li>
+            <li><b>Ordenamiento:</b> Se pueden ordenar los elementos del arreglo en orden ascendente o descendente.</li>
+            <li><b>Búsqueda:</b> Se puede buscar un elemento específico en el arreglo.</li>
+        </ul>
+
+        <h2>Conclusión</h2>
+        <p>Los arreglos son una herramienta fundamental en C para almacenar y manipular datos de manera eficiente. Con una comprensión sólida de la sintaxis y las operaciones de los arreglos, puedes escribir programas más efectivos y estructurados.</p>
+    </div>
+</body>
+</html>

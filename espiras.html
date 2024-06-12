@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número de Espiras de un Inductor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #00796b;
+        }
+        h2 {
+            color: #004d40;
+        }
+        h3 {
+            color: #004d40;
+        }
+        p {
+            color: #333;
+        }
+        .content {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        code {
+            display: block;
+            background: #f1f8e9;
+            color: #1b5e20;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button-container a {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button-container a:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Número de Espiras de un Inductor</h1>
+
+        <h2>Teoría</h2>
+   <p>El número de espiras (N) de un inductor está relacionado con su inductancia (L) y otras propiedades físicas del inductor. La inductancia de un inductor se calcula mediante la fórmula:</p>
+<p>L = (μ * N<sup>2</sup> * A) / l</p>
+<p>Donde:</p>
+<ul>
+    <li><b>L</b>: inductancia en henrios (H).</li>
+    <li><b>μ</b>: permeabilidad magnética del núcleo del inductor.</li>
+    <li><b>N</b>: número de espiras.</li>
+    <li><b>A</b>: área de la sección transversal del núcleo del inductor.</li>
+    <li><b>l</b>: longitud media del camino magnético en el núcleo del inductor.</li>
+</ul>
+
+  
+
+        <h2>Programa en C para Calcular el Número de Espiras</h2>
+        <p>A continuación se muestra un programa en C que calcula el número de espiras de un inductor, dada su inductancia, la permeabilidad magnética y otras propiedades físicas:</p>
+        <code>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main() {
+    float inductancia, permeabilidad, area, longitud, numero_espiras;
+
+    // Lectura de los valores de entrada
+    printf("Ingrese la inductancia del inductor (en henrios): ");
+    scanf("%f", &inductancia);
+
+    printf("Ingrese la permeabilidad magnética (en henrios por metro): ");
+    scanf("%f", &permeabilidad);
+
+    printf("Ingrese el área de la sección transversal del núcleo (en metros cuadrados): ");
+    scanf("%f", &area);
+
+    printf("Ingrese la longitud media del camino magnético (en metros): ");
+    scanf("%f", &longitud);
+
+    // Cálculo del número de espiras
+    numero_espiras = sqrt((inductancia * longitud) / (permeabilidad * area));
+
+    // Impresión del resultado
+    printf("\nEl número de espiras del inductor es: %.2f\n", numero_espiras);
+
+    return 0;
+}
+        </code>
+
+        <h2>Diagrama</h2>
+<img src="diagrama5.png" alt="diagrama" class="centered-image">
+     
+ <h2>Ejecutable</h2>
+<img src="ejecutable8.png" alt="diagrama" class="centered-image">
+<div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+    <a href="menuservicios.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU</a>
+    <a href="menuunidad2.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU UNIDAD</a>
+ <a href="actividades2.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">ACTIVIDADES </a>
+</div>
+

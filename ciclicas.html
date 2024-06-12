@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras Cíclicas</title>
+  </head>
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #00796b;
+        }
+        h2 {
+            color: #004d40;
+        }
+        h3 {
+            color: #004d40;
+        }
+        p {
+            color: #333;
+        }
+        .content {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        code {
+            display: block;
+            background: #f1f8e9;
+            color: #1b5e20;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button-container a {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button-container a:hover {
+            background-color: #004d40;
+        }
+    </style>
+
+<body>
+    <div class="content">
+        <h1>Estructuras Cíclicas</h1>
+
+        <h2>Introducción</h2>
+        <p>Las estructuras cíclicas, también conocidas como bucles o loops, son fundamentales en la programación y permiten que un conjunto de instrucciones se repita múltiples veces hasta que se cumpla una condición específica. En C, los bucles más comunes son <code>for</code>, <code>while</code>, y <code>do-while</code>.</p>
+
+        <h2>Estructuras Cíclicas en C</h2>
+
+        <h3>1. <code>for</code></h3>
+        <p>La estructura <code>for</code> se utiliza para ejecutar un bloque de código un número específico de veces.</p>
+        <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i;
+
+    for (i = 0; i < 5; i++) {
+        printf("Iteración %d\\n", i+1);
+    }
+
+    return 0;
+}
+        </code>
+
+        <h3>2. <code>while</code></h3>
+        <p>La estructura <code>while</code> se utiliza para ejecutar un bloque de código mientras una condición sea verdadera.</p>
+        <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i = 0;
+
+    while (i < 5) {
+        printf("Iteración %d\\n", i+1);
+        i++;
+    }
+
+    return 0;
+}
+        </code>
+
+        <h3>3. <code>do-while</code></h3>
+        <p>La estructura <code>do-while</code> se utiliza para ejecutar un bloque de código al menos una vez y luego repetirlo mientras una condición sea verdadera.</p>
+        <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i = 0;
+
+    do {
+        printf("Iteración %d\\n", i+1);
+        i++;
+    } while (i < 5);
+
+    return 0;
+}
+        </code>
+    </div>
+<div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+    <a href="menuservicios.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU</a>
+    <a href="menuunidad2.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU UNIDAD</a>
+<a href="practicas2.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">PRACTICAS</a>
+
+ 
+</div>
+
+</body>
+</html>

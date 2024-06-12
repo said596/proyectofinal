@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medida de la Superficie de una Figura Regular</title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #00796b;
+        }
+        h2 {
+            color: #004d40;
+        }
+        h3 {
+            color: #004d40;
+        }
+        p {
+            color: #333;
+        }
+        .content {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        code {
+            display: block;
+            background: #f1f8e9;
+            color: #1b5e20;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button-container a {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button-container a:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Medida de la Superficie de una Figura Regular</h1>
+
+        <h2>Teoría</h2>
+        <p>Para calcular la superficie de figuras geométricas regulares, se aplican fórmulas específicas:</p>
+        <ul>
+           <li><b>Cuadrado:</b> A = L<sup>2</sup></li>
+<li><b>Rectángulo:</b> A = b × h</li>
+<li><b>Círculo:</b> A = πr<sup>2</sup></li>
+<li><b>Triángulo equilátero:</b> A = √3/4 × L<sup>2</sup></li>
+<li><b>Pentágono regular:</b> A = 1/4 × √(5(5 + 2√5)) × L<sup>2</sup></li>
+
+        </ul>
+
+        <h2>Diagrama de Flujo</h2>
+   <img src="diagrama11.png" alt="diagrama" class="centered-image" style="width: 80%;">
+      
+
+        <h2>Ejemplo de Código en C</h2>
+        <code>
+            #include &lt;stdio.h&gt;<br>
+            #include &lt;math.h&gt;<br>
+            <br>
+            void calcularSuperficie() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;int opcion;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;double lado, base, altura, radio, superficie;<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;printf("Seleccione el tipo de figura:\\n");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;printf("1. Cuadrado\\n");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;printf("2. Rectángulo\\n");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;printf("3. Círculo\\n");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;printf("4. Triángulo equilátero\\n");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;printf("5. Pentágono regular\\n");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;scanf("%d", &opcion);<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;switch(opcion) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 1:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Ingrese el lado del cuadrado: ");<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf("%lf", &lado);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;superficie = lado * lado;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 2:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Ingrese la base y la altura del rectángulo: ");<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf("%lf %lf", &base, &altura);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;superficie = base * altura;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 3:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Ingrese el radio del círculo: ");<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf("%lf", &radio);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;superficie = M_PI * radio * radio;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 4:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Ingrese el lado del triángulo equilátero: ");<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf("%lf", &lado);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;superficie = (sqrt(3) / 4) * lado * lado;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 5:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Ingrese el lado del pentágono regular: ");<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf("%lf", &lado);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;superficie = (1.0 / 4) * sqrt(5 * (5 + 2 * sqrt(5))) * lado * lado;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Opción no válida.\\n");<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return;<br>
+                }<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;printf("La superficie de la figura es: %.2lf\\n", superficie);<br>
+            }<br>
+            <br>
+            int main() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;for (int i = 0; i < 5; i++) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("\\nCálculo %d:\\n", i + 1);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;calcularSuperficie();<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+            }<br>
+        </code>
+ <h2>Ejecutable</h2>
+   <img src="ejecutable4.png" alt="Descripción de la imagen" class="centered-image">
+    </div>
+<div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+    <a href="menuservicios.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU</a>
+    <a href="menuunidad1.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">MENU UNIDAD</a>
+ <a href="actividades1.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">ACTIVIDADES </a>
+</div>
+
+
+</body>
+</html>
